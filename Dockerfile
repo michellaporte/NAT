@@ -6,13 +6,13 @@ RUN apt-get update
 #RUN apt-get upgrade -y
 
 # Install and setup project dependencies
-RUN apt-get install -y curl wget
+RUN apt-get install -y apt-utils curl wget locales
 RUN locale-gen en_GB en_GB.UTF-8
 #Set Local
-RUN locale-gen en_GB.UTF-8  
-ENV LANG en_GB.UTF-8  
-ENV LANGUAGE en_GB:en  
-ENV LC_ALL en_GB.UTF-8  
+RUN locale-gen en_GB.UTF-8
+# ENV LANG en_GB.UTF-8
+# ENV LANGUAGE en_GB:en
+# ENV LC_ALL en_GB.UTF-8
 
 #prepare for Java download
 RUN apt-get install -y python-software-properties
@@ -35,4 +35,4 @@ WORKDIR /home/looker/looker/
 
 #Download Looker Jar
 RUN wget https://s3.amazonaws.com/download.looker.com/aeHee2HiNeekoh3uIu6hec3W/looker-latest.jar
-RUN mv looker-latest.jar lookerjar
+RUN mv looker-latest.jar looker.jar
