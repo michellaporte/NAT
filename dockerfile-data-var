@@ -1,0 +1,22 @@
+FROM ubuntu:16.04
+MAINTAINER "michel.laporte@essencedigital.com"
+# Update the APT cache & Backup Sources list
+RUN sed -i.bak 's/main$/main universe/' /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get install -y software-properties-common
+
+#Add Looker and Group
+RUN groupadd looker
+RUN useradd -m -g looker looker
+ENV USER looker
+ENV HOME_DIR /home/looker/looker
+#switch to Looker
+RUN mkdir $HOME_DIR
+WORKDIR $HOME_DIR
+
+#Download Looker Jar
+ADD ./looker-latest.jar .
+RUN mv looker-latest.jar looker.jar
+RUN chown $USER:$USER looker.jar
+USER $USER
+VOLUME /home/looker/looker
