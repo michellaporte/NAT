@@ -23,5 +23,8 @@ ADD ./looker-latest.jar .
 ADD ./looker.sh .
 RUN mv looker-latest.jar looker.jar
 RUN chown $USER:$USER looker.jar
+RUN chown $USER:$USER looker.sh
+RUN chmod +x looker.sh
+RUN chown -R $USER:$USER $HOME_DIR
 USER $USER
 VOLUME /home/looker/looker
