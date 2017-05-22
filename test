@@ -1,0 +1,4 @@
+FROM ubuntu:16.04
+
+RUN export  MEM=$(cat /proc/meminfo | grep MemTotal | awk '{print $2}')
+ENTRYPOINT echo "hello $MEM"
