@@ -3,13 +3,12 @@
 #   args: ['build', '-t', 'eu.gcr.io/sixty-kyber/testapp:0.1','.']
 # - name: 'gcr.io/cloud-builders/docker'
 #   args: ['push', 'eu.gcr.io/sixty-kyber/testapp:0.1']
-    - id: build-builder
-    name: gcr.io/cloud-builders/docker
-    args: ['build', '--rm=false', '-t', 'eu.gcr.io/sixty-kyber/gckb-example-builder', '-f', 'Dockerfile.builder', '.']
+- id: build-builder
+  name: gcr.io/cloud-builders/docker
+  args: ['build', '--rm=false', '-t', 'eu.gcr.io/sixty-kyber/gckb-example-builder', '-f', 'Dockerfile.builder', '.']
 
-
-  - id: build
-    name: eu.gcr.io/sixty-kyber/gckb-example-builder
-    args: ['./scripts/build.sh']
-    waitFor:
+- id: build
+  name: eu.gcr.io/sixty-kyber/gckb-example-builder
+  args: ['./scripts/build.sh']
+  waitFor:
       - build-builder
