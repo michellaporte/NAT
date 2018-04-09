@@ -6,7 +6,6 @@
 - id: build-builder
   name: gcr.io/cloud-builders/docker
   args: ['build', '--rm=false', '-t', 'eu.gcr.io/sixty-kyber/gckb-example-builder', '-f', 'Dockerfile.builder', '.']
-
 - id: build
   name: eu.gcr.io/sixty-kyber/gckb-example-builder
   args: ['./scripts/build.sh']
