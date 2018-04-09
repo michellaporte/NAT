@@ -6,8 +6,10 @@ steps:
    - id: push-image
      name: 'gcr.io/cloud-builders/docker'
      args: ['push', 'eu.gcr.io/sixty-kyber/gckb-example-builder']
+     waitFor:
+       - build-builder
    - id: build
      name: eu.gcr.io/sixty-kyber/gckb-example-builder
      args: ['./scripts/build.sh']
      waitFor:
-       - build-builder
+       - push-image
