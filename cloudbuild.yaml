@@ -9,4 +9,9 @@ steps:
      args: ['./scripts/build.sh']
      env: 
        - 'PROJECT=$BUILD_ID'
+   - id: build-3
+     name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
+     args: ['./scripts/build.sh']
+     env: 
+       - 'PROJECT=$COMMIT_SHA'
      waitFor: ['-']
