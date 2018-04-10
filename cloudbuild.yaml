@@ -2,7 +2,8 @@ steps:
    - id: build
      name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
      env: 
-       - 'SHIT=MICHELLAPORTE'
+       - 'SHIT=LIKIOUMAMAN'
+       - 'HOST_INSTANCE=test-instance'
      args: ['./scripts/build.sh']
    # - id: build-2
    #   name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
