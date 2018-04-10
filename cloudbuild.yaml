@@ -14,10 +14,10 @@ steps:
      args: ['./scripts/build.sh']
      waitFor:
        - ['-']
-   - id: build-2
-     name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
-     env: 
-       - 'PROJECT=$BUILD_ID'
-     args: ['./scripts/build.sh']
-     waitFor:
-       - ['-']
+   # - id: build-2
+   #   name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
+   #   env: 
+   #     - 'PROJECT=$BUILD_ID'
+   #   args: ['./scripts/build.sh']
+   #   waitFor:
+   #     - ['-']
