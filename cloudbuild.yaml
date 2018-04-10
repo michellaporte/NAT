@@ -1,12 +1,4 @@
 steps:
-   # - id: build-builder
-   #   name: gcr.io/cloud-builders/docker
-   #   args: ['build', '--rm=false', '-t', 'eu.gcr.io/$PROJECT_ID/gckb-example-builder', '-f', 'Dockerfile.builder', '.']
-   # - id: push-image
-   #   name: 'gcr.io/cloud-builders/docker'
-   #   args: ['push', 'eu.gcr.io/$PROJECT_ID/gckb-example-builder']
-   #   waitFor:
-   #     - build-builder
    - id: build
      name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
      env: 
