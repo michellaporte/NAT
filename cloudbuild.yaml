@@ -9,7 +9,8 @@ steps:
        - build-builder
    - id: build
      name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
-     env: 'PROJECT=$PROJECT_ID'
+     env: 
+       - 'PROJECT=$PROJECT_ID'
      args: ['./scripts/build.sh']
      waitFor:
        - push-image
