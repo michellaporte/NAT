@@ -18,4 +18,6 @@ steps:
      volumes:
      - name: 'vol1'
        path: '/volume'
-     args: ['cat','/volume/env.sh']
+     args: 
+      - |
+          cat /volume/env.sh
