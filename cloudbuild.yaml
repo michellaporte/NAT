@@ -8,8 +8,8 @@ steps:
      - 'SHIT=LIKIOUMAMAN'
      - 'HOST_INSTANCE=test-instance'
      args: |
-           cat <<EOF > /volume/env.sh \
-           FOO=BAR \
+           cat <<EOF > /volume/env.sh 
+           FOO=BAR
            EOF
    - id: build-2
      name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
