@@ -5,8 +5,9 @@ steps:
        - 'SHIT=LIKIOUMAMAN'
        - 'HOST_INSTANCE=test-instance'
      args:
-       - | gcloud compute instances  \
-       list
+       - |
+          gcloud compute instances  \
+          list
      
 
 #args: ['./scripts/build.sh']
