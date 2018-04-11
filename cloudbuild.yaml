@@ -3,10 +3,10 @@ steps:
      name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
      volumes:
      - name: 'vol1'
-     - path: '/volume'
+       path: '/volume'
      env: 
-       - 'SHIT=LIKIOUMAMAN'
-       - 'HOST_INSTANCE=test-instance'
+     - 'SHIT=LIKIOUMAMAN'
+     - 'HOST_INSTANCE=test-instance'
      args: |
            cat <<EOF > /volume/env.sh \
            FOO=BAR \
