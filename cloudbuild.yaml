@@ -4,15 +4,9 @@ steps:
      env: 
        - 'SHIT=LIKIOUMAMAN'
        - 'HOST_INSTANCE=test-instance'
-     args: ['./scripts/build.sh']
-   # - id: build-2
-   #   name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
-   #   args: ['./scripts/build.sh']
-   #   env: 
-   #     - 'PROJECT=$BUILD_ID'
-   # - id: build-3
-   #   name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
-   #   args: ['./scripts/build.sh']
-   #   env: 
-   #     - 'PROJECT=$COMMIT_SHA'
-   #   waitFor: ['-']
+     args:
+       - gcloud compute instances  \
+       list
+     
+
+#args: ['./scripts/build.sh']
