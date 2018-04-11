@@ -7,7 +7,8 @@ steps:
      env: 
      - 'SHIT=LIKIOUMAMAN'
      - 'HOST_INSTANCE=test-instance'
-     args: |
+     args: 
+     - |
            cat <<EOF > /volume/env.sh 
            FOO=BAR
            EOF
