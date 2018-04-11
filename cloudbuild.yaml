@@ -13,6 +13,9 @@ steps:
            EOF
    - id: build-2
      name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
+     volumes:
+     - name: 'vol1'
+       path: '/volume'
      args: ['cat','/volume/env.sh']
    # - id: build-3
    #   name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
