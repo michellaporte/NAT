@@ -5,19 +5,16 @@ steps:
      - name: 'vol1'
        path: /volume
      env: 
-     - 'SHIT=LIKIOUMAMAN'
+     - 'sdsadas'
      - 'HOST_INSTANCE=test-instance'
      args: 
      - |
-           cat <<EOF > /volume/env.sh 
-           FOO=BAR
-           EOF
-
-   - id: build-2
-     name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
-     volumes:
-     - name: 'vol1'
-       path: /volume
-     args: 
-      - |
-          cat /volume/env.sh
+           echo $PROJECT_ID
+   # - id: build-2
+   #   name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
+   #   volumes:
+   #   - name: 'vol1'
+   #     path: /volume
+   #   args: 
+   #    - |
+   #        cat /volume/env.sh
