@@ -5,10 +5,15 @@ steps:
      # - name: 'vol1'
      #   path: /volume
      env: 
-     - 'HOST_INSTANCE=test-instance'
+     - 'BRANCH_NAME=$BRANCH_NAME'
      args: 
      - |
-           echo $PROJECT_ID
+           if [ "${BRANCH_NAME}" = shit ];
+           then
+           echo "shit"
+           else
+           echo "Branch is ${BRANCH_NAME}"
+           fi
    # - id: build-2
    #   name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
    #   volumes:
