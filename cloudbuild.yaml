@@ -1,9 +1,9 @@
 steps:
    - id: build
      name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
-     volumes:
-     - name: 'vol1'
-       path: /volume
+     # volumes:
+     # - name: 'vol1'
+     #   path: /volume
      env: 
      - 'HOST_INSTANCE=test-instance'
      args: 
