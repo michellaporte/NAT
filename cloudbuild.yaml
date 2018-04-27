@@ -1,18 +1,3 @@
 steps:
-  name: gcr.io/sixty-kyber/make
+  name: gcr.io/sixty-kyber/make:latest
   args: ['A']
-   # - id: build
-   #   name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
-   #   # volumes:
-   #   # - name: 'vol1'
-   #   #   path: /volume
-   #   env: 
-   #   - 'BRANCH_NAME=$BRANCH_NAME'
-   #   args: 
-   #   - |
-   #         if [ "${BRANCH_NAME}" = shit ];
-   #         then
-   #         echo "shit"
-   #         else
-   #         echo "Branch is ${BRANCH_NAME}"
-   #         fi

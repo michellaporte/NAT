@@ -1,13 +1,13 @@
-SHELL := /bin/bash
+# SHELL := /bin/bash
 
 .PHONY: A
 A:
-	echo "A";
+	@ bash serviceA/deploy.sh;
 
 .PHONY: B
 B: 
-	echo "B";
+	@ bash serviceB/deploy.sh;
 
 .PHONY: C
 C: 
-	echo "C";
+	@ bash serviceC/deploy.sh;
