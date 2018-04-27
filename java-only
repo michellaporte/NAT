@@ -1,5 +1,0 @@
-FROM openjdk:8-jdk-alpine
-COPY looker-latest.jar /usr/src/myapp/
-#WORKDIR /usr/src/myapp
-EXPOSE 9999
-CMD java -XX:+UseG1GC -XX:MaxGCPauseMillis=2000 -XX:MaxMetaspaceSize=800m -Xms1228228k -Xmx1228228k -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -Xloggc:/tmp/gc.log  ${JAVAARGS} -jar looker-latest.jar start ${LOOKERARGS}
