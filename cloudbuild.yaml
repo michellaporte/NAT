@@ -1,7 +1,6 @@
 steps:
   name: gcr.io/sixty-kyber/make
   args: ['A']
-
    # - id: build
    #   name: eu.gcr.io/$PROJECT_ID/gckb-example-builder
    #   # volumes:
