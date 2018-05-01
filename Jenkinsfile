@@ -6,6 +6,7 @@ pipeline {
         stage('Build') {
           steps {
             sh 'echo "begining steps"'
+            jiraComment(issueKey: 'DEVOPS-756', body: 'http://sdfkmsdflkds')
           }
         }
         stage('Build2') {
@@ -27,7 +28,7 @@ pipeline {
             echo 'Testing..'
           }
         }
-        stage('') {
+        stage('error') {
           steps {
             sh 'echo "errors"'
           }
@@ -39,7 +40,7 @@ pipeline {
         echo 'Deploying....'
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         cleanWs(cleanWhenSuccess: true, cleanWhenNotBuilt: true, cleanWhenFailure: true, cleanWhenAborted: true)
       }
