@@ -1,13 +1,13 @@
 # SHELL := /bin/bash
 
-.PHONY: A
-A:
+.PHONY: serviceA
+serviceA:
 	@ bash serviceA/deploy.sh;
 
-.PHONY: B
-B: 
+.PHONY: serviceB
+serviceB: 
 	@ bash serviceB/deploy.sh;
 
-.PHONY: C
-C: 
+.PHONY: serviceC
+serviceC: 
 	@ bash serviceC/deploy.sh;
