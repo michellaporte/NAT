@@ -1,3 +1,4 @@
-steps:  
+steps:
   name: gcr.io/sixty-kyber/make:latest
-  args: ['A']
+  args:
+    - A
