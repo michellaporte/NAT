@@ -1,4 +1,5 @@
 steps:
-  name: gcr.io/sixty-kyber/make:latest
-  args:
-    - A
+  - id: first
+    name: gcr.io/sixty-kyber/make:latest
+    args:
+       - A
