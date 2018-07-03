@@ -1,7 +1,4 @@
 steps:
   - id: first
     name: gcr.io/sixty-kyber/make:latest
-    args:
-       - serviceA
-       - -f
-       - Makefile
+    args: ['serviceA', '-f', 'Makefile']
